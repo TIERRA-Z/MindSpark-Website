@@ -6,13 +6,29 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5dc;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 :root {
   --dark-grey: #333333;
   --medium-grey: #636363;
   --light-grey: #eeeeee;
   --ash: #f4f4f4;
-  --primary-color: rgb(214, 182, 112);
+  --primary-color: #7CB518;
   --white: #f5f5dc;
   --border: 1px solid var(--light-grey);
   --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
@@ -23,22 +39,52 @@
   box-sizing: border-box;
 }
 
+.text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.text-3 span {
+  color: #FED049;
+  font-weight: 500;
+}
+
+
+
+.what{
+padding-left:40px;
+
+}
+
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
   width: 48%;
-  padding: 10px;
+  padding: 50px;
   padding-bottom: 30%;
   height: 500px;
   border-radius: 25px;
   margin-right: 20px;
-  margin-bottom: 20px; /* Add margin to create space between columns */
+  margin-bottom: 20px;
+  list-style-type: square; /* Add margin to create space between columns */
+}
+.column:hover {
+  float: left;
+  width: 48%;
+  padding: 50px;
+  padding-bottom: 30%;
+  height: 150px;
+  border-radius: 25px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
 }
 
 .column-container {
   width: 100%; /* Adjust this width according to your layout */
   margin: 0 auto;
-  text-align: center; /* Center the container horizontally */
+  text-align: center; 
+  /* Center the container horizontally */
 }
 
 /* Clear floats after the columns */
@@ -53,17 +99,35 @@
   .column {
     width: 100%;
   }
-
-.learnmore{
-    width: 500px;
-    height: 600px;
-    color: red;
-    border-radius: 45px;
-
-}
 }
 
+.learnmore {
+  background-color: #7CB518; /* Default background color */
+  border: none; /* Remove default button border */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Adjust padding for button size */
+  font-size: 16px; /* Font size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+.learnmore:hover {
+  background-color: #507019; /* Change background color on hover */
+}  
 
+hr{
+  border-color: #7CB518;
+}
+
+h1{
+padding-top: 20px;
+}
+
+.intro{
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding: 20px;
+}
 
 body {
   font-family: inherit;
@@ -75,6 +139,7 @@ body {
 ul {
   list-style: none;
 }
+
 
 a {
   text-decoration: none;
@@ -89,14 +154,21 @@ button {
 }
 
 .btn {
-  display: block;
+  display: inline-block; /* Change from block to inline-block to make them inline */
   background-color: var(--primary-color);
   color: var(--white);
   text-align: center;
-  padding: 0.6rem 1.4rem;
+  padding: 0.6rem 8rem; /* Adjust padding to reduce the gap */
   font-size: 1rem;
   font-weight: 500;
   border-radius: 5px;
+  margin: 1px; /* Add margin to create space between buttons */
+}
+.btn:hover{
+  background-color: #507019;
+  color:var(--white);
+  font-style: italic;
+  font-size: 0.95rem;
 }
 
 .icon {
@@ -104,10 +176,12 @@ button {
   border-radius: 10px;
 }
 
-.logo {
-  margin-right: 1.5rem;
-}
 
+.logo {
+    margin-right: 2rem;
+    margin-left: -2rem; /*padding to the left to make it move*/
+    }
+    
 #nav-menu {
   border-bottom: var(--border);
 }
@@ -137,16 +211,19 @@ button {
   margin: 0 0.6rem;
 }
 
-.menu-bar .nav-link:hover,
-.dropdown-link:hover {
+.menu-bar .nav-link:hover {
   color: var(--primary-color);
+  font-style: italic;
+  text-decoration: underline;
+
 }
+
 
 .nav-start,
 .nav-end,
 .menu-bar,
 .right-container,
-.right-container .search {
+.right-container {
   display: flex;
   align-items: center;
 }
@@ -193,14 +270,11 @@ button {
   }
 
 
-  .menu.show,
-  .dropdown.active {
+  .menu.show {
     display: block;
   }
 
-  .dropdown ul {
-    padding-left: 0.3rem;
-  }
+  
 
   .menu-bar {
     display: flex;
@@ -233,8 +307,23 @@ button {
   }
 }
 /*This is the footer color ands such*/
-.footer{
-  padding-bottom: 3%;
-  padding-top: 5%;
-    background-color: rgb(214, 182, 112);
+.footer {
+  background-color: #7CB518; /* Light background color */
+  padding: 20px; /* Padding around the footer content */
+  text-align: center; /* Center-align the text */
+}
+
+.footer-text {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Adjust font size */
+  color: black; /* Text color */
+}
+.footer-link {
+  color: black; /* Link color */
+  text-decoration: none; /* Add underline */
+}
+.footer-link:hover {
+  color: #f5f5dc; /* Link color */
+  text-decoration: underline; /* Add underline */
+  font-style: italic;
 }

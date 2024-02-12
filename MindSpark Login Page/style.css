@@ -4,8 +4,26 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Inter", sans-serif;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5dc;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 /*Main Body Color*/
 body{
@@ -14,7 +32,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(146, 101, 34); /*Scroll up underlying color*/
+  background: #390099; /*Scroll up underlying color*/
   background-image: url("MIND\ \(Website\).png");
 }
 .center {
@@ -28,7 +46,7 @@ body{
   /*Card with form inputs*/
 ::selection{
   color: #f5f5dc;
-  background: #A555EC;
+  background: #7CB518;
 }
 .wrapper{
   width: 380px;
@@ -75,7 +93,7 @@ form input{
   padding: 0 45px;
   font-size: 18px;
   background: none;
-  caret-color: #A555EC;
+  caret-color: #7CB518;
   border-radius: 5px;
   border: 2px solid #bfbfbf;
   border-bottom-width: 2px;
@@ -85,7 +103,7 @@ form input{
 /*Outerline of */
 form .field input:focus,
 form .field.valid input{
-  border-color: #A555EC;
+  border-color: #7CB518;
 }
 form .field.shake input,
 form .field.error input{
@@ -108,10 +126,11 @@ form .field.error input{
   color: #dc3545;
 }
 
+
 /*Icon Color*/
 form input:focus ~ .icon,
 form .field.valid .icon{
-  color: #A555EC;
+  color: #7CB518;
 }
 form .field.shake input:focus ~ .icon,
 form .field.error input:focus ~ .icon{
@@ -139,11 +158,13 @@ form .pass-txt{
 }
 /*Links*/
 .wrapper a{
-  color: #5372F0;
+  color: #3A86FF;
   text-decoration: none;
 }
+
 .wrapper a:hover{
   text-decoration: underline;
+font-style: italic;
 }
 form input[type="submit"]{
   height: 50px;
@@ -151,13 +172,13 @@ form input[type="submit"]{
   color: #fff;
   padding: 0;
   border: none;
-  background: #A555EC;
+  background: #7CB518;
   cursor: pointer;
   border-bottom: 2px solid rgba(0,0,0,0.1);
   transition: all 0.3s ease;
 }
 form input[type="submit"]:hover{
-  background: #D09CFA;
+  background: #507019;
   font-style: italic;
 }
 
