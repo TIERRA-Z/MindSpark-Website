@@ -1,4 +1,54 @@
 /*JavaScript for Login Page!*/
+//I added this too!
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  var email = document.getElementById('email').value;
+  var password = document.getElementById('password').value;
+  var birthday = new Date(document.getElementById('birthday').value);
+  var today = new Date();
+  var age = today.getFullYear() - birthday.getFullYear();
+  var m = today.getMonth() - birthday.getMonth();
+  if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+      age--;
+  }
+  var parentEmail = document.getElementById('parentEmail').value;
+
+  var isValid = true;
+
+  if (!email.trim()) {
+      showError('email', 'Email can\'t be blank');
+      isValid = false;
+  }
+
+  if (!password.trim()) {
+      showError('password', 'Password can\'t be blank');
+      isValid = false;
+  }
+
+  if (age < 13) {
+      if (!parentEmail.trim()) {
+          showError('parent-email', 'Parent/Teacher email can\'t be blank');
+          isValid = false;
+      }
+  }
+
+  if (isValid) {
+      // Proceed with form submission
+      console.log('Email:', email);
+      console.log('Password:', password);
+      console.log('Birthday:', birthday);
+      console.log('Parent/Teacher Email:', parentEmail);
+      // Replace this with actual form submission code
+  }
+});
+
+function showError(fieldId, errorMessage) {
+  var field = document.getElementById(fieldId);
+  var errorElement = field.querySelector('.error-txt');
+  errorElement.textContent = errorMessage;
+  errorElement.style.display = 'block';
+}
+//I added this
 
 const form = document.querySelector("form");
 eField = form.querySelector(".email"),

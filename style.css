@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
 html{
   scroll-behavior: smooth;
 }
@@ -50,7 +51,6 @@ html{
 }
 
 
-
 .what{
 padding-left:40px;
 
@@ -59,31 +59,29 @@ padding-left:40px;
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 48%;
+  width: 30%;
   padding: 50px;
   padding-bottom: 30%;
   height: 500px;
   border-radius: 25px;
   margin-right: 20px;
   margin-bottom: 20px;
+  margin-left: 175px;
   list-style-type: square; /* Add margin to create space between columns */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
+
 .column:hover {
-  float: left;
-  width: 48%;
-  padding: 50px;
-  padding-bottom: 30%;
-  height: 150px;
-  border-radius: 25px;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  background-color: #f0f0f0; /* Change background color on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box-shadow on hover */
   color: white;
 }
 
 .column-container {
   width: 100%; /* Adjust this width according to your layout */
   margin: 0 auto;
-  text-align: center; 
+  text-align: center;
+  padding-left: 50px; 
   /* Center the container horizontally */
 }
 
@@ -103,7 +101,7 @@ padding-left:40px;
 
 .learnmore {
   background-color: #7CB518; /* Default background color */
-  border: none; /* Remove default button border */
+  border: #507019 2px; /* Remove default button border */
   color: white; /* Text color */
   padding: 10px 20px; /* Adjust padding for button size */
   font-size: 16px; /* Font size */
@@ -112,7 +110,9 @@ padding-left:40px;
   transition: background-color 0.3s ease; /* Smooth transition on hover */
 }
 .learnmore:hover {
+  font-style: italic;
   background-color: #507019; /* Change background color on hover */
+  font-size: 0.95rem;
 }  
 
 hr{
@@ -156,7 +156,7 @@ button {
 .btn {
   display: inline-block; /* Change from block to inline-block to make them inline */
   background-color: var(--primary-color);
-  color: var(--white);
+  color: white;
   text-align: center;
   padding: 0.6rem 8rem; /* Adjust padding to reduce the gap */
   font-size: 1rem;
@@ -166,7 +166,7 @@ button {
 }
 .btn:hover{
   background-color: #507019;
-  color:var(--white);
+  color:white;
   font-style: italic;
   font-size: 0.95rem;
 }
@@ -292,8 +292,6 @@ button {
     font-size: 1.2rem;
     margin: 0;
   }
-
- 
 
   .menu-bar > li:not(:last-child) {
     padding-bottom: 0.5rem;

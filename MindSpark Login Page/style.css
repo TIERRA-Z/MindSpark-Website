@@ -25,6 +25,19 @@ html{
 }
 
 
+.login-form {
+  padding-bottom: 100px; /* Decreased padding-bottom to prevent excessive space */
+  padding-top: 20px; /* Adjusted padding-top for proper spacing */
+}
+
+.mind{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding-bottom: -6px;
+}
+
 /*Main Body Color*/
 body{
   width: 100%;
@@ -32,8 +45,9 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #390099; /*Scroll up underlying color*/
-  background-image: url("MIND\ \(Website\).png");
+  background: #7CB518; /*Scroll up underlying color*/
+  background-image: url("Kids.png");
+  
 }
 .center {
     display: block;
@@ -47,6 +61,7 @@ body{
 ::selection{
   color: #f5f5dc;
   background: #7CB518;
+  
 }
 .wrapper{
   width: 380px;
@@ -224,4 +239,28 @@ form input[type="submit"]:hover{
 
 body.dark-theme {
     background-color: #333;
+}
+
+/*This is the footer color ands such*/
+.footer {
+  background-color: #7CB518; /* Light background color */
+  padding: 20px; /* Padding around the footer content */
+  text-align: center; /* Center-align the text */
+  position:fixed;
+  bottom: 0;
+}
+
+.footer-text {
+  margin: 0; /* Remove default margin */
+  font-size: 14px; /* Adjust font size */
+  color: black; /* Text color */
+}
+.footer-link {
+  color: black; /* Link color */
+  text-decoration: none; /* Add underline */
+}
+.footer-link:hover {
+  color: #f5f5dc; /* Link color */
+  text-decoration: underline; /* Add underline */
+  font-style: italic;
 }
