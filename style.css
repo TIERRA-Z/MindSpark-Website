@@ -29,8 +29,8 @@ html{
   --medium-grey: #636363;
   --light-grey: #eeeeee;
   --ash: #f4f4f4;
-  --primary-color: #7CB518;
-  --white: #f5f5dc;
+  --primary-color: black; /*#7CB518 for green color*/
+  --white: #ffffff;
   --border: 1px solid var(--light-grey);
   --shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
@@ -100,7 +100,7 @@ padding-left:40px;
 }
 
 .learnmore {
-  background-color: #7CB518; /* Default background color */
+  background-color: black; /* Default background color #7CB518*/
   border: #507019 2px; /* Remove default button border */
   color: white; /* Text color */
   padding: 10px 20px; /* Adjust padding for button size */
@@ -116,7 +116,7 @@ padding-left:40px;
 }  
 
 hr{
-  border-color: #7CB518;
+  border-color: black; /*#7CB518*/
 }
 
 h1{
@@ -131,9 +131,10 @@ padding-top: 20px;
 
 body {
   font-family: inherit;
-  background-color: var(--white);
+  background-image: var(--white);
   color: var(--dark-grey);
   letter-spacing: -0.4px;
+
 }
 
 ul {
@@ -306,7 +307,7 @@ button {
 }
 /*This is the footer color ands such*/
 .footer {
-  background-color: #7CB518; /* Light background color */
+  background-color: black; /* Light green background color #7CB518*/
   padding: 20px; /* Padding around the footer content */
   text-align: center; /* Center-align the text */
 }
@@ -314,14 +315,17 @@ button {
 .footer-text {
   margin: 0; /* Remove default margin */
   font-size: 14px; /* Adjust font size */
-  color: black; /* Text color */
+  color: var(--white); /* Text color */
 }
 .footer-link {
-  color: black; /* Link color */
+  color: var(--white); /* Link color */
   text-decoration: none; /* Add underline */
 }
 .footer-link:hover {
-  color: #f5f5dc; /* Link color */
+  color: #7CB518; /* Link color */
   text-decoration: underline; /* Add underline */
   font-style: italic;
 }
+
+
+/*DELTE THIS BUT THIS IS FOR THE COLUMNS THINGIES*/

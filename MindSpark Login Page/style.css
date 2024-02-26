@@ -26,8 +26,10 @@ html{
 
 
 .login-form {
-  padding-bottom: 100px; /* Decreased padding-bottom to prevent excessive space */
+  padding-bottom: 80px; /* Reduced padding-bottom */
   padding-top: 20px; /* Adjusted padding-top for proper spacing */
+  max-width: 400px; /* Set maximum width to prevent overlap with footer */
+  margin: 0 auto; /* Center the form horizontally */
 }
 
 .mind{
@@ -246,8 +248,11 @@ body.dark-theme {
   background-color: #7CB518; /* Light background color */
   padding: 20px; /* Padding around the footer content */
   text-align: center; /* Center-align the text */
-  position:fixed;
+  position: fixed;
   bottom: 0;
+  left: 0; /* Ensures the footer starts from the left edge of the viewport */
+  right: 0; /* Ensures the footer ends at the right edge of the viewport */
+  z-index: 1000; /* Ensure footer is above other content */
 }
 
 .footer-text {
@@ -264,3 +269,5 @@ body.dark-theme {
   text-decoration: underline; /* Add underline */
   font-style: italic;
 }
+
+/*so we making the toggle be position right, fix footer, add the asterisk, do the sign up page*/
