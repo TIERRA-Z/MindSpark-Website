@@ -13,17 +13,15 @@
   margin: auto;
 }
 
-.resume{
-  color:#fff; 
+.resume {
+  color: #fff;
   background: black;
   padding-top: 20px;
-  padding-bottom:50px;
+  padding-bottom: 50px;
 }
 
-
-
-/*resume cards*/
-.resume .serv-content .card{
+/* Resume cards */
+.resume .serv-content .card {
   width: calc(33% - 20px);
   background: white;
   text-align: center;
@@ -31,35 +29,51 @@
   padding: 50px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: center;
-
+  position: relative; /* Added */
 }
 
-/*resume hoverover card*/
+/* Show text on hover */
+.resume .serv-content .card::before {
+  content: attr(data-text); /* Show content attribute */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+.resume .serv-content .card:hover::before {
+  opacity: 1; /* Show on hover */
+}
+
+/* Resume hoverover card */
 .resume .serv-content {
   display: flex;
   flex-wrap: wrap;
 }
 
 .resume .serv-content .card {
-  flex: 1 1 300px; /* Adjust width as needed */
+  flex: 1 1 300px;
   margin: 10px;
-  background: #f0f0f0;
+  background: none; /* Blue color with 50% opacity */
   border-radius: 10px;
   overflow: hidden;
   position: relative;
   transition: all 0.3s ease;
-  height: 500px; /* Increase height 250px orignal*/
-  background-size: cover; /* Ensure the image covers the entire card */
-  background-position: center; /* Center the background image */
+  height: 500px;
+  background-size: cover;
+  background-position: center;
 }
 
+
 .resume .serv-content .card:hover {
-  background: #a5a195;
-  transform: translateY(-5px); /* Move card up on hover */
+  background: red; /*The hover card witht the hidden text*/
+  transform: translateY(-5px);
   border-radius: 4px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add box shadow on hover */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
   text-decoration: underline;
+  text-shadow: #333333; /*i added this*/
 }
 
 .resume .serv-content .card .box {
@@ -67,7 +81,7 @@
 }
 
 .resume .serv-content .card:hover .box {
-  transform: scale(1.1); /*1.05 default so this is the text scale for the "for parents, students, etc."*/
+  transform: scale(1.1);
 }
 
 .resume .serv-content .card i {
@@ -85,6 +99,7 @@
   font-weight: 500;
   margin: 10px 0 7px 0;
 }
+
 
 
 html{
@@ -250,7 +265,6 @@ button.TryNow:hover {
 .card:hover .info button {
   opacity: 1; /* Make button visible on hover */
 }
-
 
 
 
